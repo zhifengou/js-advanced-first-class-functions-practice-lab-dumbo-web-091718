@@ -28,13 +28,13 @@ function driversByName(drivers){
   })
 }
 
-function totalRevenue(drivers){
-  sum=0
-  drivers.forEach(function(d){
-    sum+=d.revenue
-  })
-  return sum;
-}
+// function totalRevenue(drivers){
+//   sum=0
+//   drivers.forEach(function(d){
+//     sum+=d.revenue
+//   })
+//   return sum;
+// }
 
 function averageRevenue(drivers){
 sum=totalRevenue(drivers)
