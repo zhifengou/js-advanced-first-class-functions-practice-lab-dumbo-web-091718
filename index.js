@@ -1,10 +1,6 @@
 
 function logDriversByHometown(drivers, ht) {
- drivers.forEach(function(d){
-   if(d.hometown===ht){
-     console.log(d.name);
-   }
- })
+
 }
 
 function driversByRevenue(drivers) {
