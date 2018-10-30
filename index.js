@@ -37,8 +37,8 @@ function totalRevenue(drivers){
 }
 
 function averageRevenue(drivers){
-sum=function totalRevenue(drivers)();
-return sum/drivers.length;
+sum=function totalRevenue(drivers)()
+return sum/drivers.length
 }
 
 
