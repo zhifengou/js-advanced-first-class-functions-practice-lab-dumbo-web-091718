@@ -39,41 +39,37 @@
 // sum=function totalRevenue(drivers)();
 // return sum/drivers.length;
 // }
-function logDriverNames(drivers) {
-  drivers.reduce((agg, el, i, arr) => console.log(el.name), [])
+function logDriverNames(drivers){
+  drivers.forEach(function(element) {
+    console.log(element['name']);
+  });
 }
-
-function logDriversByHometown(drivers, keyword) {
-  drivers.reduce((agg, el, i, arr) => {
-    if (el.hometown === keyword) {
-      console.log(el.name)
+function logDriversByHometown(drivers, hometown){
+  drivers.forEach(function(element) {
+    if (element['hometown'] === hometown){
+      console.log(element['name']);
     }
-  }, [])
+  });
 }
-
-function driversByRevenue(drivers) {
-  newDrivers = [...drivers]
-  return newDrivers.sort((a, b) => {
-    return (a.revenue - b.revenue)
-  })
+ function driversByRevenue(drivers){
+  let sortDrivers = drivers.slice();
+   sortDrivers.sort( function(a,b){
+    return a['revenue']-b['revenue'];
+  });
+  return sortDrivers;
 }
-
-function driversByName(drivers) {
-  newDrivers = [...drivers]
-  return newDrivers.sort((a, b) => {
-    return a.name.localeCompare(b.name)
-  })
+ function driversByName(drivers){
+  let sortDrivers = drivers.slice();
+  sortDrivers.sort(function(a,b){
+    return a["name"].localeCompare(b["name"]);
+  });
+  return sortDrivers;
 }
-
-function totalRevenue(drivers) {
-  return drivers.reduce((agg, el, i, arr) => {
-    return agg + el.revenue
-  }, 0)
+ function totalRevenue(drivers){
+  return drivers.reduce(function(accumulator, currentValue){
+    return accumulator + currentValue.revenue;
+  },0);
 }
-
-function averageRevenue(drivers) {
-  const sum = drivers.reduce((agg, el, i, arr) => {
-    return agg + el.revenue
-  }, 0)
-  return sum / drivers.length
+ function averageRevenue(drivers){
+  return totalRevenue(drivers)/drivers.length;
 }
