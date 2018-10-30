@@ -13,12 +13,12 @@ drivers.forEach(function(d){
 })
 }
 
-// function driversByRevenue(drivers) {
-//   newDrivers = [...drivers]
-//   return newDrivers.sort(function (d1, d2) {
-//     return d1.revenue - d2.revenue
-//   })
-// }
+function driversByRevenue(drivers) {
+  newDrivers = [...drivers]
+  return newDrivers.sort(function (d1, d2) {
+    return d1.revenue - d2.revenue
+  })
+}
 
 
 // function driversByName(drivers){
