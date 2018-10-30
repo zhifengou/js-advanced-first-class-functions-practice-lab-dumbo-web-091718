@@ -35,10 +35,14 @@ function driversByName(drivers){
 //   })
 //   return sum;
 // }
+function totalRevenue(drivers){
+   return drivers.reduce(function(accumulator, currentValue){
+    return accumulator + currentValue.revenue;
+  },0)
+}
 
 function averageRevenue(drivers){
-sum=totalRevenue(drivers)
-return sum/drivers.length
+return totalRevenue(drivers)/drivers.length
 }
 
 
