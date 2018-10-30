@@ -36,10 +36,10 @@ function totalRevenue(drivers){
   return sum;
 }
 
-function averageRevenue(drivers){
-sum=function totalRevenue(drivers)();
-return sum/drivers.length;
-}
+// function averageRevenue(drivers){
+// sum=function totalRevenue(drivers)();
+// return sum/drivers.length;
+// }
 
 
 // function logDriverNames(drivers){
